@@ -1,0 +1,36 @@
+syntax = "proto3";
+option java_package="com.coda.erp.account.generated";
+option java_outer_classname="AccountProtos";
+
+
+message Account {
+      int32 id = 1;
+      string userName = 2;
+      string password = 3;
+
+}
+
+message AuthorizationRequest{
+       string userName = 1;
+         string password = 2;
+
+}
+
+
+message AuthorizationResponse{
+       string userName = 1;
+
+
+}
+
+service AccountService {
+  rpc auth(AuthorizationRequest) returns(AuthorizationResponse);
+
+
+
+
+
+
+}
+
+
